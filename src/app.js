@@ -49,9 +49,15 @@ let randomCard = cards => {
   const cardSuit = cards[random].suit;
 
   let entity;
-  cardSuit === "Diamonds"
-    ? (entity = "&diams;")
-    : (entity = "&" + cardSuit.toLowerCase() + ";");
+  if (cardSuit === "Diamonds") {
+    entity = "&diams;";
+  } else if (cardSuit === "Hearts") {
+    entity = "&hearts;";
+  } else if (cardSuit === "Spades") {
+    entity = "&spades;";
+  } else if (cardSuit === "Clubs") {
+    entity = "&clubs;";
+  }
 
   const card = document.createElement("div");
   card.classList.add("card", cardSuit.toLowerCase());
