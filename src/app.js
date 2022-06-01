@@ -5,14 +5,14 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
-
 let loadPage = () => {
   //alert("This is just a test to make sure my JavaScript is working")
 };
+//window.onload = loadPage;
+
+window.setTimeout(function() {
+  window.location.reload();
+}, 10000);
 
 let deckBuilder = () => {
   const values = [
@@ -72,3 +72,11 @@ let randomCard = cards => {
 
 const cards = deckBuilder();
 randomCard(cards);
+
+const button = document.createElement("button");
+button.innerText = "New Card";
+button.id = "button1";
+button.addEventListener("click", () => {
+  button.onclick = location.reload();
+});
+document.body.appendChild(button);

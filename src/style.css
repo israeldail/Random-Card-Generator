@@ -46,3 +46,19 @@ body {
 .card.diamonds {
   color: red;
 }
+
+#button1 {
+  padding: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 5px;
+  border-color: red;
+  background-color: red;
+  position: relative;
+  margin-top: 350px;
+  margin-left: 420px;
+}
+
+#button1:hover {
+  background-color: lightcoral;
+}
